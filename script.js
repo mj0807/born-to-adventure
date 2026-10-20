@@ -65,7 +65,7 @@ form.addEventListener("submit", e => {
     f.notes.value ? `Notes: ${f.notes.value}` : "",
     "Please share availability and booking details."
   ].filter(Boolean);
-  window.open(`https://wa.me/919857706000?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
+  window.open(`https://wa.me/918219050387?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
 });
 
 /* ---------- Footer year ---------- */
