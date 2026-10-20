@@ -1,0 +1,229 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{margin:0;font-family:"DM Sans",sans-serif;color:#111;background:#f4f3ef;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+:focus-visible{outline:2px solid #c9f35a;outline-offset:3px}
+.skip-link{position:absolute;left:-999px;top:10px;background:#111;color:#fff;padding:10px 16px;border-radius:8px;z-index:100}
+.skip-link:focus{left:10px}
+
+.nav{height:78px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:#f4f3ef;position:sticky;top:0;z-index:20}
+.logo{font:800 1.05rem "Manrope";letter-spacing:.08em}
+.logo span{font-weight:500}
+.nav nav{display:flex;gap:28px;font-size:.88rem}
+.nav nav a:hover,.text-link:hover{opacity:.55}
+.nav-cta{background:#111;color:#fff;padding:13px 20px;border-radius:30px;font-size:.84rem}
+.menu-btn{display:none;border:0;background:none;font-size:1.5rem;cursor:pointer;color:#111}
+
+.hero{min-height:calc(100vh - 78px);position:relative;background:#2a2f2a url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=85") center/cover;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.12) 78%),linear-gradient(0deg,rgba(0,0,0,.58),transparent 55%)}
+.hero-content{position:relative;z-index:1;padding:8vw 7vw 6vw;max-width:920px}
+.eyebrow{font-size:.7rem;letter-spacing:.2em;font-weight:700;margin:0 0 18px}
+.eyebrow.dark{color:#777}
+.hero h1{font:800 clamp(3.6rem,8vw,7.3rem)/.86 "Manrope";letter-spacing:-.075em;margin:0 0 28px}
+.hero h1 em,.story-copy em,.booking-copy em{font-style:normal;font-weight:500}
+.hero-copy{max-width:580px;font-size:1.08rem;line-height:1.65;color:#eee}
+.hero-actions{display:flex;gap:12px;margin:30px 0 45px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:20px;border:0;border-radius:30px;padding:16px 23px;font-weight:700;cursor:pointer;font-family:inherit;font-size:.95rem;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:#c9f35a;color:#111}
+.ghost{border:1px solid rgba(255,255,255,.55);color:#fff;background:rgba(0,0,0,.12)}
+.light{background:#fff;color:#111}
+.trust-row{display:flex;gap:45px}
+.trust-row div{display:flex;flex-direction:column;gap:5px}
+.trust-row strong{font-size:1.05rem}
+.trust-row span{font-size:.72rem;color:#ddd}
+.scroll{position:absolute;right:5vw;bottom:35px;writing-mode:vertical-rl;font-size:.62rem;letter-spacing:.18em}
+
+.section{padding:105px 7vw}
+.intro{display:grid;grid-template-columns:1.2fr .8fr;gap:8vw;align-items:end}
+.section h2,.intro h2{font:800 clamp(2.6rem,5vw,5rem)/.95 "Manrope";letter-spacing:-.06em;margin:0}
+.section h2 span{font-weight:500}
+.intro-text{line-height:1.75;color:#666;max-width:480px;margin:0}
+
+.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:42px}
+.text-link{font-weight:700;font-size:.88rem}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.experience-card{background:#fff;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.experience-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.08)}
+.card-image{height:320px;background-color:#d9d8d2;background-size:cover;background-position:center}
+.image-paragliding{background-image:url("https://images.unsplash.com/photo-1620720970374-5b7e67e1e610?auto=format&fit=crop&w=1400&q=85")}
+.image-rafting{background-image:url("https://images.unsplash.com/photo-1599443380179-33737c17ca81?auto=format&fit=crop&w=1000&q=80")}
+.image-balloon{background-image:url("https://images.unsplash.com/photo-1604791292049-377212f38c41?auto=format&fit=crop&w=1000&q=80")}
+.image-bungee{background-image:url("https://images.unsplash.com/photo-1559677624-3c956f10d431?auto=format&fit=crop&w=1400&q=85")}
+.image-zipline{background-image:url("https://images.unsplash.com/photo-1693878658414-42bed08fc192?auto=format&fit=crop&w=1000&q=80")}
+.image-trek{background-image:url("https://images.unsplash.com/photo-1700984017339-ce0abd1a5cc9?auto=format&fit=crop&w=1000&q=80")}
+.image-camping{background-image:url("https://images.unsplash.com/photo-1712597802047-62eacd764209?auto=format&fit=crop&w=1000&q=80")}
+.card-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.tag{font-size:.62rem;letter-spacing:.15em;font-weight:800;margin-bottom:11px}
+.card-body h3{font:700 1.45rem "Manrope";margin:0 0 10px}
+.card-body p{color:#777;line-height:1.6;font-size:.88rem;min-height:65px;margin:0 0 15px}
+.details{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:17px}
+.details span{background:#f0f0ec;border-radius:20px;padding:6px 9px;font-size:.67rem;color:#666}
+.card-bottom{border-top:1px solid #eee;padding-top:17px;display:flex;justify-content:space-between;font-size:.84rem;margin-top:auto}
+.card-bottom a{font-weight:700}
+.group-card{background:#161616;color:#fff;justify-content:center}
+.group-card .card-body{justify-content:center;padding:36px}
+.group-card .tag{color:#c9f35a}
+.group-card h3{font-size:2rem;letter-spacing:-.04em}
+.group-card p{color:#aaa;min-height:0;margin-bottom:26px}
+.group-card .btn{align-self:flex-start}
+
+.story-banner{padding:100px 7vw;min-height:690px;background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.35)),url("https://images.unsplash.com/photo-1716128033373-60b172383931?auto=format&fit=crop&w=2200&q=80") center/cover;background-color:#1d2420;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:10vw;align-items:center}
+.story-copy h2{font:800 clamp(3.5rem,7vw,7rem)/.86 "Manrope";letter-spacing:-.07em;margin:0 0 30px}
+.story-copy p:not(.eyebrow){max-width:450px;color:#ddd;line-height:1.7;margin-bottom:30px}
+.location-panel{border-top:1px solid rgba(255,255,255,.35)}
+.location-panel div{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.35)}
+.location-panel span{font-size:.64rem;color:#aaa;letter-spacing:.12em}
+.location-panel strong{font:600 1.15rem "Manrope"}
+.map{width:100%;height:220px;border:0;border-radius:14px;margin-top:24px;filter:grayscale(.3)}
+
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feature{padding:28px 0;border-top:1px solid #ccc}
+.icon{font:700 1rem "Manrope";margin-bottom:50px}
+.feature h3{font:700 1.15rem "Manrope"}
+.feature p{color:#777;line-height:1.65;font-size:.88rem}
+
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:280px 280px;gap:15px}
+.gallery-grid.from-list{grid-template-rows:none;grid-auto-rows:280px}
+.gallery-item{border-radius:16px;background-color:#d9d8d2;background-size:cover;background-position:center;position:relative;overflow:hidden;border:0;padding:0;font:inherit;cursor:pointer}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.gallery-item:hover img{transform:scale(1.04)}
+.gallery-item span{position:absolute;left:20px;bottom:18px;color:#fff;font-weight:700;text-shadow:0 2px 10px #000}
+.gallery-item.tall{grid-row:span 2}
+.gallery-item.wide{grid-column:span 2}
+.gallery-1{background-image:linear-gradient(#0000,#0007),url("https://images.unsplash.com/photo-1621342548664-e0b939512ad3?auto=format&fit=crop&w=1000&q=80")}
+.gallery-2{background-image:linear-gradient(#0000,#0007),url("https://images.unsplash.com/photo-1642933196504-62107dac9258?auto=format&fit=crop&w=1000&q=80")}
+.gallery-3{background-image:linear-gradient(#0000,#0007),url("https://images.unsplash.com/photo-1712597802047-62eacd764209?auto=format&fit=crop&w=1000&q=80")}
+.gallery-4{background-image:linear-gradient(#0000,#0007),url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80")}
+
+.testimonial{max-width:1050px;text-align:center;margin:0 auto}
+.testimonial blockquote{font:600 clamp(2rem,4vw,4rem)/1.15 "Manrope";letter-spacing:-.05em;margin:30px 0 18px}
+.testimonial-note{color:#777;font-size:.85rem}
+
+.faq{padding-top:40px}
+.faq-list{max-width:900px;border-top:1px solid #ccc}
+.faq details{border-bottom:1px solid #ccc;padding:22px 0}
+.faq summary{font:700 1.15rem "Manrope";cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-weight:500;font-size:1.4rem;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:#666;line-height:1.7;margin:14px 0 0;max-width:720px}
+
+.booking{background:#161616;color:#fff;display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw}
+.booking-copy h2{font:800 clamp(3rem,6vw,6rem)/.9 "Manrope";letter-spacing:-.07em;margin:0 0 25px}
+.booking-copy>p:not(.eyebrow){color:#aaa;line-height:1.7;max-width:440px}
+.contact-note{margin-top:50px;padding-top:20px;border-top:1px solid #444;display:flex;flex-direction:column;gap:8px}
+.contact-note a{color:#c9f35a}
+.contact-note strong{margin-bottom:3px}
+
+.booking-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.booking-form label{font-size:.74rem;color:#aaa}
+.booking-form input,.booking-form select,.booking-form textarea{display:block;width:100%;margin-top:8px;background:#1a1a1a;border:1px solid #3a3a3a;color:#fff;padding:15px;border-radius:9px;font:inherit;font-size:.95rem;outline:none;color-scheme:dark}
+.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus{border-color:#c9f35a}
+.booking-form textarea{min-height:100px;resize:vertical}
+.booking-form .full{grid-column:1/-1}
+
+.whatsapp-card{background:#222;border:1px solid #3a3a3a;border-radius:22px;padding:42px}
+.whatsapp-icon{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#c9f35a;color:#111;font:800 1rem "Manrope";margin-bottom:24px}
+.whatsapp-card h3{font:700 clamp(2rem,3vw,3rem)/1 "Manrope";letter-spacing:-.05em;margin:0 0 6px}
+.whatsapp-btn{width:100%;margin-top:4px;background:#c9f35a;color:#111}
+.whatsapp-card small{color:#777;font-size:.75rem}
+
+footer{background:#0d0d0d;color:#fff;padding:45px 7vw 25px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:55px;gap:20px}
+.footer-top p{color:#777}
+.socials{display:flex;gap:20px;font-size:.82rem}
+.socials a:hover{color:#c9f35a}
+.footer-bottom{border-top:1px solid #333;padding-top:20px;display:flex;justify-content:space-between;color:#666;font-size:.72rem}
+
+.wa-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:30;transition:transform .15s}
+.wa-float:hover{transform:scale(1.08)}
+
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:5vw}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:100%;max-height:82vh;border-radius:10px}
+.lightbox-caption{color:#ddd;margin-top:14px}
+.lightbox-close{position:absolute;top:16px;right:22px;background:none;border:0;color:#fff;font-size:2.4rem;cursor:pointer}
+
+@media(max-width:1050px){
+.cards{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:850px){
+.nav nav,.nav-cta{display:none}
+.menu-btn{display:block}
+.nav{padding:0 6vw}
+.nav nav.mobile-open{display:flex;position:absolute;top:78px;left:0;right:0;padding:25px 6vw;background:#f4f3ef;flex-direction:column;gap:18px;font-size:1rem;box-shadow:0 12px 20px rgba(0,0,0,.06)}
+.hero-content{padding:20vw 6vw 12vw}
+.hero h1{font-size:4.1rem}
+.trust-row{gap:22px}
+.scroll{display:none}
+.intro,.story-banner,.booking{grid-template-columns:1fr}
+.story-banner{gap:50px}
+.cards{grid-template-columns:1fr}
+.card-image{height:260px}
+.section{padding:75px 6vw}
+.section-head{flex-wrap:wrap;gap:16px}
+.feature-grid{grid-template-columns:1fr 1fr}
+.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px}
+.gallery-grid.from-list{grid-auto-rows:220px}
+.gallery-item.tall{grid-row:span 1}
+.gallery-item.wide{grid-column:span 2}
+.booking-form{grid-template-columns:1fr}
+.whatsapp-card{padding:28px}
+.footer-top{align-items:flex-start;flex-direction:column}
+.footer-bottom{gap:10px;flex-direction:column;padding-bottom:60px}
+}
+
+@media(max-width:500px){
+.hero h1{font-size:3.45rem}
+.trust-row span{font-size:.63rem}
+.feature-grid{grid-template-columns:1fr}
+.icon{margin-bottom:20px}
+.gallery-grid,.gallery-grid.from-list{display:block}
+.gallery-item{height:230px;margin-bottom:12px;width:100%}
+.location-panel div{gap:15px}
+.hero-actions .btn{width:100%}
+}
+
+/* ---------- Video cards & gallery ---------- */
+video.card-image{display:block;width:100%;object-fit:cover;background:#d9d8d2}
+.video-grid{grid-template-columns:repeat(4,1fr);grid-template-rows:none;grid-auto-rows:auto}
+.video-grid .gallery-item{aspect-ratio:3/4;height:auto}
+.video-grid .gallery-item video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.video-grid .gallery-item:hover video{transform:scale(1.04)}
+.video-grid .gallery-item::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.55));pointer-events:none}
+.video-grid .gallery-item span{z-index:1}
+.gallery-note{color:#888;font-size:.85rem;margin:22px 0 0}
+.lightbox-video{max-width:100%;max-height:82vh;border-radius:10px;background:#000}
+@media(max-width:850px){.video-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.video-grid{display:grid;gap:10px}.video-grid .gallery-item{height:auto;margin:0}}
+
+/* ---------- Full gallery page ---------- */
+.nav nav a[aria-current="page"]{font-weight:700}
+.gallery-intro{color:#666;margin:-18px 0 30px;max-width:560px;line-height:1.6}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.chip{border:1px solid #ccc;background:#fff;border-radius:30px;padding:10px 16px;font:600 .85rem "DM Sans",sans-serif;cursor:pointer;color:#111}
+.chip span{color:#888;font-weight:500;margin-left:4px}
+.chip.active{background:#111;color:#fff;border-color:#111}
+.chip.active span{color:#c9f35a}
+.full-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.clip{position:relative;aspect-ratio:9/16;border:0;padding:0;border-radius:14px;overflow:hidden;cursor:pointer;background:#d9d8d2;font:inherit}
+.clip img,.clip video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.clip video{z-index:1}
+.clip::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(transparent 55%,rgba(0,0,0,.6));pointer-events:none}
+.clip-title{position:absolute;left:14px;right:14px;bottom:14px;z-index:3;color:#fff;font-weight:700;font-size:.9rem;text-align:left;text-shadow:0 1px 6px #000}
+.clip-time{position:absolute;top:10px;right:10px;z-index:3;background:rgba(0,0,0,.55);color:#fff;font-size:.7rem;padding:3px 7px;border-radius:10px}
+.clip-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.85);color:#111;display:grid;place-items:center;font-size:.9rem;padding-left:3px;transition:opacity .2s}
+.clip:hover .clip-play{opacity:0}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:0;color:#fff;font-size:2.4rem;width:52px;height:52px;border-radius:50%;cursor:pointer;line-height:1}
+.lightbox-nav.prev{left:3vw}.lightbox-nav.next{right:3vw}
+.gallery-cta{align-items:center}
+.gallery-cta-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.view-all{display:inline-flex;margin-top:26px}
+@media(max-width:1100px){.full-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:850px){.full-grid{grid-template-columns:repeat(3,1fr)}.gallery-cta-actions{justify-content:flex-start}}
+@media(max-width:560px){.full-grid{grid-template-columns:1fr 1fr;gap:8px}.lightbox-nav{display:none}.chip{padding:8px 12px;font-size:.8rem}}
+
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
