@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161616">
+  <title>Share Your Experience | Born to Adventure</title>
+  <meta name="description" content="Share your experience with Born to Adventure. Leave a Google review and tell us about your adventure.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="review.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="review-config.js"></script>
+</head>
+<body class="review-page">
+<header class="nav review-nav">
+  <a class="logo" href="index.html"><img src="images/logo.png" alt="Born to Adventure logo" width="44" height="44">BORN <span>TO ADVENTURE</span></a>
+  <a class="nav-cta" href="index.html">Back to website</a>
+</header>
+<main class="review-main">
+  <section class="review-hero">
+    <p class="eyebrow dark">BORN TO ADVENTURE · KULLU</p>
+    <h1>Your adventure.<br><em>Your story.</em></h1>
+    <p class="review-lead">Thank you for choosing us. Your feedback helps other travellers discover their next adventure.</p>
+  </section>
+
+  <section class="review-card google-card">
+    <div class="step-label">STEP 1 · GOOGLE</div>
+    <h2>Review us on Google</h2>
+    <p>Tap below to open our Google review page. Submit your review there, then come back to this tab for Step 2.</p>
+    <a class="btn primary review-action" href="https://g.page/r/Caol43y8dwBFEAE/review" target="_blank" rel="noopener">Write a Google review <span>↗</span></a>
+    <p class="review-note">Google opens in a new tab so this page stays here.</p>
+  </section>
+
+  <section class="review-card website-card" id="website-review">
+    <div class="step-label">STEP 2 · WEBSITE</div>
+    <h2>Share your experience here too</h2>
+    <p>After submitting your Google review, tell us a little about your experience. Your website review will appear below.</p>
+    <form id="customer-review-form">
+      <label>Your name
+        <input type="text" name="customer_name" maxlength="80" placeholder="Enter your name" required>
+      </label>
+      <fieldset class="rating-field">
+        <legend>Your rating</legend>
+        <div class="star-picker" role="radiogroup" aria-label="Choose a rating">
+          <input type="radio" name="rating" id="rating-5" value="5" required><label for="rating-5" aria-label="5 stars">★</label>
+          <input type="radio" name="rating" id="rating-4" value="4"><label for="rating-4" aria-label="4 stars">★</label>
+          <input type="radio" name="rating" id="rating-3" value="3"><label for="rating-3" aria-label="3 stars">★</label>
+          <input type="radio" name="rating" id="rating-2" value="2"><label for="rating-2" aria-label="2 stars">★</label>
+          <input type="radio" name="rating" id="rating-1" value="1"><label for="rating-1" aria-label="1 star">★</label>
+        </div>
+      </fieldset>
+      <label>Your review
+        <textarea name="review_text" rows="5" minlength="5" maxlength="2000" placeholder="How was your experience with Born to Adventure?" required></textarea>
+      </label>
+      <button class="btn primary review-action" id="review-submit" type="submit">Submit website review <span>↗</span></button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section class="published-reviews">
+    <div class="section-head review-list-head">
+      <div><p class="eyebrow dark">TRAVELLER STORIES</p><h2>Guest <span>reviews.</span></h2></div>
+    </div>
+    <div id="reviews-list" class="reviews-list"><p class="review-loading">Loading reviews…</p></div>
+  </section>
+</main>
+<footer class="review-footer"><a href="index.html">Born to Adventure</a><span>Explore. Challenge. Remember.</span></footer>
+<script src="review.js"></script>
+</body>
+</html>
